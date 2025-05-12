@@ -93,8 +93,8 @@ class CarRentalSystem {
             if (rental.getCar() == car) {
                 rentalToRemove = rental;
                 break;
-            }//show(){}
-            //hide(){} 
+            }
+            
         }if (rentalToRemove != null) {
             rentals.remove(rentalToRemove);
 
@@ -126,7 +126,7 @@ class CarRentalSystem {
 
                 System.out.print("Enter the number of days for rental: ");
                 int rentalDays = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
 
                 Customer newCustomer = new Customer("CUS" + (customers.size() + 1), customerName);
                 addCustomer(newCustomer);
@@ -196,15 +196,13 @@ class CarRentalSystem {
                 System.out.println("Invalid choice. Please enter a valid option.");
             }
         }
-
         System.out.println("\nThank you for using the Car Rental System!");
     }
-
 }
 public class Car_rental{
     public static void main(String[] args) {
         CarRentalSystem rentalSystem = new CarRentalSystem();
-        Car car1 = new Car("C001", "Toyota", "Camry", 60.0); // Different base price per day for each car
+        Car car1 = new Car("C001", "Toyota", "Camry", 60.0); 
         Car car2 = new Car("C002", "Honda", "Accord", 70.0);
         Car car3 = new Car("C003", "Mahindra", "Thar", 150.0);
         rentalSystem.addCar(car1);
